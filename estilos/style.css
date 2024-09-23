@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+/* Fontes */
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+
+    .young-serif-regular {
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .outfit {
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+      
+    :root {
+        --font-outfit: 'Outfit', sans-serif;
+        --font-poppins: 'Poppins', sans-serif;
+        --font-young-serif: 'Young Serif', serif;
+    }
+        /* Font-Size: 
+            - Font size (inputs): 32px
+        */
+
+    /* Cores */
+    :root {
+        --purple: hsl(259, 100%, 65%);
+        --light-red: hsl(0, 100%, 67%);
+
+        --white: hsl(0, 0%, 100%);
+        --off-white: hsl(0, 0%, 94%);
+        --light-grey: hsl(0, 0%, 86%);
+        --smokey-grey: hsl(0, 1%, 44%);
+        --off-black: hsl(0, 0%, 8%);
+    }
+
+/* Reset básico */
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+
+/* Estilos Mobile para 375px */
+
+body {
+    background-color: var(--off-white);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;   
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--white);
+
+    padding: 30px 15px;
+    /*padding-bottom: 235px;*/
+    margin: 15px auto;
+    margin-top: 100px;
+    max-width: 620px; /* limite maximo desktop */
+    
+    border-radius: 35px 35px 80px 35px;
+    box-shadow: 10px rgba(0, 0, 0, 0.1);
+
+    width: 375px;
+    max-width: 600px;
+}
+
+
+/* formulário */
+form{
+    display: flex;
+    flex-direction: column;    
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-labels, .form-inputs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-labels label, .form-input input{
+    flex: 1;
+    text-align: center;
+}
+
+.form-labels > label{
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: var(--smokey-grey);
+}
+
+.form-inputs , input, button{
+    padding: 10px;
+    margin: 5px;
+}
+
+.form-labels{
+    font-family: var(--font-outfit);
+    font-size: 17pt;
+}
+
+.form-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-input > input {
+    width: 30%;
+    height: 30%; /* talvez tentar % */
+    font-family: var(--font-poppins);
+    font-weight: bold;
+    border: 1px solid var(--off-white);
+    border-radius: 8px;
+    font-size: 20pt;
+    box-sizing: border-box;
+    
+}
+
+/* error msg embaixo das caixas */
+.error-container{
+    display: flex;
+    justify-content: column;    
+}
+
+.error-container > p {
+    width: 30%;
+    margin: 0px;
+    padding-top: 5px;
+    padding-left: 10px;
+    
+    color: var(--light-red);
+    font-size: 12px;
+    /*margin-top: 5px;*/
+    font-family: var(--font-young-serif);
+}
+
+/* botão */
+
+.button-container{
+    position: relative;
+    width: 100%;
+}
+
+.styled-hr{
+    position: relative;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border: none;
+    border-top: 2px solid var(--off-white); /* cor e espessura da linha */
+    transform: translateY(2500%); /* centraliza verticalmente a linha*/
+    z-index: 0; /* linha atrás do botão*/
+    margin: 15px;
+}
+
+.round-button{
+    background-color: var(--purple);
+    color: black;
+    border-radius: 50%;
+
+    border: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 13pt;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 150px;
+    
+
+    position: relative; /* garante que o botão fique sobre a linha */
+    z-index: 1; /* mantem o botão acima da linha */
+}
+
+.round-button:hover{
+    background-color: rgba(133, 77, 255, 0.829);
+}
+
+.round-button i {
+    margin: 0;
+}
+
+.material-symbols-outlined {
+    color: var(--off-white);
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+/* fim do botão */
+
+/* resultado */
+
+.result-container{
+    /* teste */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+}
+
+
+
+
+/* rodapé */
+footer {
+    background-color: var(--smokey-grey);
+    margin: 100px 0px 0px 0px;
+    padding: 10px;
+    }
+
+    .attribution{
+    font-style: var(--font-young-serif);
+    font-size: 14pt; text-align: center;
+    color: var(--white); 
+    }
+    .attribution a { 
+        color: var(--off-white); 
+    }
+/* fim do rodapé*/
+
+/* Estilos para Desktop - 1440px */
+@media (min-width: 601px) {
+    .form-inputs > input {
+        width: 30%;
+    }
+}

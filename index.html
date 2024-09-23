@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <link rel="stylesheet" href="estilos/style.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-container">
+        <form id="age-form">
+          <div class="form-row">
+            <!--textos-->
+            <div class="form-labels">
+              <label for="days">DAY</label>
+              <label for="months">MONTH</label>
+              <label for="years">YEAR</label>
+            </div>
+            <!--caixas-->
+            <div class="form-input">
+              <input type="number" id="days" name="days" min="1" max="31" maxlength="2" placeholder="DD" data-birth-date >
+              <input type="number" id="months" name="months" min="1" max="12" maxlength="2" placeholder="MM" data-birth-date >
+              <input type="number" id="years" name="years" min="4" max="4" max="2300" maxlength="4" placeholder="YYYY" data-birth-date >
+            </div>
+
+            <!--ERROR MSG-->
+
+            <div class="error-container">
+              <p id="day-error" class="error-message"></p><!--error msg dia-->
+              <p id="month-error" class="error-message"></p><!--error msg mês-->
+              <p id="year-error" class="error-message"></p><!--error msg ano-->
+            </div>
+
+          </div>
+            <!--botão-->
+            <div class="button-container">
+              <hr class="styled-hr">
+              <button type="button" onclick="calculate()" class="round-button"><span class="material-symbols-outlined">
+                local_cafe
+                </span></button>
+            </div>
+        </form>
+      </div>
+
+    <div class="result-container">
+                  <!--mensagem de error-->
+      <p id="error-message" class="error-message"></p>
+<!--      <p id="result"></p>     -->
+      <p id="yresult">-- Years</p>
+      <p id="mresult">-- Months</p>
+      <p id="dresult">-- Days</p>
+    </div>
+  </div>
+  <!--Fim do Corpo -->
+
+  <!--FOOTER abaixo-->
+  <footer>
+    <div class="attribution">
+      Repository of those who coded: <a href="https://github.com/brunosilvestre95" target="_blank">Github/brunosilvestre95</a>. <br>
+      Coded by: <a href="https://www.instagram.com/silvestrebruno_/" target="_blank">Bruno Silvestre</a>. <br>
+      Challenge by: <a href="https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm" target="_blank">FrontEndMentor</a>. 
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
